@@ -1,0 +1,34 @@
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  #themes-btn {
+    cursor: pointer;
+  }
+}
+/* Media query for phones */
+@media (max-width: 576px) {
+  header {
+    padding: 10px;
+    justify-content: space-between;
+    .container {
+      h1,
+      span {
+        font-size: $text-size-xs;
+      }
+    }
+  }
+}
+/* Media query for tablets */
+@media (min-width: 577px) and (max-width: 1280px) {
+  header {
+    padding: 10px;
+    justify-content: space-between;
+    .container {
+      h1,
+      span {
+        font-size: $text-size-lg;
+      }
+    }
+  }
+}

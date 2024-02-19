@@ -1,0 +1,30 @@
+@use "sass:color";
+
+$blue-color: #797ef9;
+$blue-200-color: darken(#797ef9, 20%);
+$purple-color: #753fc6;
+
+$light-color: #ffffff;
+$dark-color: #0c1015;
+
+$dark-table-color: #22272e;
+$light-table-color: #a5acb6;
+
+$colors: (
+  "blue-color": $blue-color,
+  "blue-200-color": $blue-200-color,
+  "purple-color": $purple-color,
+  "light-color": $light-color,
+  "dark-color": $dark-color,
+  "dark-table-color": $dark-table-color,
+  "light-table-color": $light-table-color,
+);
+
+@each $color, $value in $colors {
+  .#{$color} {
+    color: $value;
+  }
+  .bg-#{$color} {
+    background-color: $value;
+  }
+}

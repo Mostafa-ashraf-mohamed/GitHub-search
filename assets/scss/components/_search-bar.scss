@@ -1,0 +1,72 @@
+$btn-width: 95px;
+
+$search-width: 100%;
+
+$when-btn-show: calc(#{$search-width} - #{$btn-width});
+
+$globe-border-radius: 10px;
+
+form#search-form {
+  position: relative;
+  width: 90%;
+  border-radius: $globe-border-radius;
+  margin: 1.5rem auto;
+  %Shared-style {
+    height: 5rem;
+    border: 0;
+    font-size: 1.8rem;
+  }
+  input[type="search"] {
+    @extend %Shared-style;
+    position: relative;
+    outline: none;
+    width: $search-width;
+    padding: 0 1.6rem;
+    border-radius: $globe-border-radius;
+    z-index: 1;
+    transition: width ease-out 0.5s;
+    &:not(:placeholder-shown) {
+      border-radius: $globe-border-radius 0 0 $globe-border-radius;
+      width: $when-btn-show;
+    }
+  }
+  button {
+    @extend %Shared-style;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: $btn-width;
+    font-weight: bold;
+    border-radius: 0 $globe-border-radius $globe-border-radius 0;
+    color: $light-color;
+    transition: box-shadow ease-out 0.5s;
+  }
+  button:hover {
+    box-shadow: 0px 13px 400px -14px rgba(255, 255, 255, 0.75);
+    -webkit-box-shadow: 0px 13px 400px -14px rgba(255, 255, 255, 0.75);
+    -moz-box-shadow: 0px 13px 400px -14px rgba(255, 255, 255, 0.75);
+    transition: box-shadow ease-out 0.5s;
+  }
+}
+
+/* Media query for phones */
+@media (max-width: 576px) {
+  form#search-form {
+    input[type="search"],
+    button {
+      height: 4rem;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+/* Media query for tablets */
+@media (min-width: 577px) and (max-width: 1280px) {
+  form#search-form {
+    input[type="search"],
+    button {
+      height: 4rem;
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.table-style {
+  .w-3 {
+    width: 3%;
+  }
+  .w-50 {
+    width: 50%;
+  }
+  .border-light {
+    border-color: $light-table-color;
+  }
+  width: 100%;
+  table {
+    border-collapse: collapse;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+    td,
+    th {
+      padding-left: 8px;
+      text-align: center;
+      img {
+        width: 60px;
+        border-radius: 50%;
+        transition: all ease-out 0.5s;
+      }
+    }
+
+    thead tr {
+      height: 60px;
+      font-size: 16px;
+      text-align: center;
+      border-bottom: 5px solid $light-table-color;
+    }
+
+    tbody tr {
+      height: 90px;
+      border-bottom: 1px solid $light-table-color;
+      bo &:last-child {
+        border: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 35.5em) {
+    table {
+      display: block;
+      > *,
+      tr,
+      td,
+      th {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+      tbody tr {
+        height: auto;
+        padding: 8px 0;
+        td {
+          margin-bottom: 12px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          &:before {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            left: 5px;
+            top: 0;
+          }
+          &:nth-child(1):before {
+            content: "#";
+          }
+          &:nth-child(2):before {
+            content: "Avatar";
+          }
+          &:nth-child(3):before {
+            content: "Login";
+          }
+          &:nth-child(4):before {
+            content: "Type";
+          }
+        }
+      }
+    }
+  }
+
+  #pagination {
+    text-align: center;
+    margin-top: 20px;
+  }
+}

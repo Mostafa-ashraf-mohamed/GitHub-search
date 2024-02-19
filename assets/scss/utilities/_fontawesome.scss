@@ -1,0 +1,133 @@
+/*fonts*/
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("./webfonts/fa-solid-900.woff2") format("woff2"),
+    url("./webfonts/fa-solid-900.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-display: block;
+  font-weight: 900;
+  src: url("./webfonts/fa-solid-900.woff2") format("woff2"),
+    url("./webfonts/fa-solid-900.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "FontAwesome";
+  font-display: block;
+  src: url("./webfonts/fa-solid-900.woff2") format("woff2"),
+    url("./webfonts/fa-solid-900.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("./webfonts/fa-brands-400.woff2") format("woff2"),
+    url("./webfonts/fa-brands-400.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Brands";
+  font-display: block;
+  font-weight: 400;
+  src: url("./webfonts/fa-brands-400.woff2") format("woff2"),
+    url("./webfonts/fa-brands-400.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "FontAwesome";
+  font-display: block;
+  src: url("./webfonts/fa-brands-400.woff2") format("woff2"),
+    url("./webfonts/fa-brands-400.ttf") format("truetype");
+}
+/*global*/
+
+.rotate-180 {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  transition: transform ease-out 0.5s;
+}
+
+/*icon style*/
+.fa-solid,
+.fa-brands {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: var(--fa-display, inline-block);
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  transition: transform ease-out 0.5s;
+}
+.fa-solid {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+.fa-brands {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+/*icon*/
+.fa-circle-half-stroke::before {
+  content: "\f042";
+}
+.fa-github:before {
+  content: "\f09b";
+}
+.fa-square-github:before {
+  content: "\f092";
+}
+
+.fa-github-square:before {
+  content: "\f092";
+}
+
+/*animation*/
+.fa-flip {
+  animation: animation-flip 0.5s infinite;
+  -webkit-animation: animation-flip 0.5s infinite; /* Safari and Chrome */
+  -moz-animation: animation-flip 0.5s infinite; /* Firefox */
+}
+
+@keyframes animation-flip {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes animation-flip {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes animation-flip {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

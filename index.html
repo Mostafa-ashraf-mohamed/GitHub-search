@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub API Search Helper</title>
+    <base href="assets/" />
+    <link rel="stylesheet" href="scss/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <i class="fa-brands fa-github icon-size-2xl"></i>
+        <h1 id="header-text" class="font-sourceCode d-inline-block">
+          GitHub Api Search Helper
+        </h1>
+        <span class="fa-flip text-size-2xl d-inline-block">_</span>
+      </div>
+
+      <i
+        id="themes-btn"
+        class="fa-solid fa-circle-half-stroke icon-size-xl"
+      ></i>
+    </header>
+
+    <main>
+      <p>Only the first 1000 search results are available in GitHub API</p>
+      <form id="search-form" class="bg-purple-color dark-color" role="search">
+        <label class="d-none" for="search">Search In GitHub API</label>
+        <input
+          id="search"
+          class="bg-light-color dark-color"
+          type="search"
+          name="search"
+          placeholder="Search In GitHub API..."
+          autofocus
+          required
+        />
+        <button
+          id="search-button"
+          class="d-block bg-purple-color"
+          type="submit"
+        >
+          Go
+        </button>
+      </form>
+      <div id="results-component" class="table-style">
+        <table id="results-table" class="bg-dark-table-color">
+          <thead>
+            <tr class="bg-purple-color border-light">
+              <th class="w-3 bg-dark-table-colorr">#</th>
+              <th class="bg-dark-table-color">Avatar</th>
+              <th class="w-50 bg-dark-table-color">Login</th>
+              <th class="bg-dark-table-color">Type</th>
+            </tr>
+          <thead>
+          <tbody id="results-table" class="bg-dark-table-color">
+          </tbody>
+        <table>
+      </div>
+      <div id="pagination"></div>
+    </main>
+
+    <footer>
+      &copy; 2023 GitHub Api Search Helper <br />
+      design and created by <a class="blue-color" href="">Mostafa Ashraf</a>
+    </footer>
+
+    <script src="js/global.js"></script>
+    <script src="js/text-animation.js"></script>
+    <script src="js/themes.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
