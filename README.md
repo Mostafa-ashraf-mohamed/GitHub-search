@@ -12,6 +12,9 @@ Welcome to GitHub-Search, a website project that utilizes the GitHub API to retr
 
 ### User-Friendly Interface
 - The user interface is intuitively designed, making it easy for visitors to search for GitHub users and view their profile information seamlessly.
+  
+### GitHub API Integration
+- support dark and light theme
 
 ### GitHub API Integration
 - Utilize the power of the GitHub API to fetch user data including profile information, repositories, followers, and following, providing comprehensive insights into a user's GitHub presence.
